@@ -42,6 +42,7 @@
             this.btChoose.TabIndex = 0;
             this.btChoose.Text = "Wybierz zdjęcie";
             this.btChoose.UseVisualStyleBackColor = true;
+            this.btChoose.Click += new System.EventHandler(this.btChoose_Click);
             // 
             // btClear
             // 
@@ -51,6 +52,7 @@
             this.btClear.TabIndex = 1;
             this.btClear.Text = "Wyczyść zdjęcie";
             this.btClear.UseVisualStyleBackColor = true;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click);
             // 
             // pbMain
             // 

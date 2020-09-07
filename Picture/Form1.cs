@@ -12,9 +12,24 @@ namespace Picture
 {
     public partial class Form1 : Form
     {
+        public string filePath = "";
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btChoose_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+                filePath = openFileDialog.FileName;
+            //MessageBox.Show($"{filePath}");
+            pbMain.Image = Image.FromFile(filePath);
+        }
+
+            private void btClear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
