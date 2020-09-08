@@ -56,6 +56,9 @@
             // 
             // pbMain
             // 
+            this.pbMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMain.Location = new System.Drawing.Point(12, 41);
             this.pbMain.Name = "pbMain";
             this.pbMain.Size = new System.Drawing.Size(776, 397);
