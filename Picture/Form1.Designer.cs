@@ -76,6 +76,7 @@
             this.Controls.Add(this.btChoose);
             this.Name = "Form1";
             this.Text = "Zdjęcie";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).EndInit();
             this.ResumeLayout(false);
 

@@ -18,6 +18,11 @@ namespace Picture
         {
             InitializeComponent();
             PicturePresent();
+            if (Settings.Default.IsPicture != "")
+            {
+                pbMain.Image = Image.FromFile(Settings.Default.IsPicture);
+                btClear.Enabled = true;
+            }
         }
 
         private void PicturePresent()
@@ -40,6 +45,24 @@ namespace Picture
         {
             pbMain.Image = null;
             btClear.Enabled = false;
+        }
+
+        public string IsPicture
+        {
+            get
+            {
+                return Settings.Default.IsPicture;
+            }
+            set
+            {
+                Settings.Default.IsPicture = value;
+            }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            IsPicture = filePath;
+            Settings.Default.Save();
         }
     }
 }
