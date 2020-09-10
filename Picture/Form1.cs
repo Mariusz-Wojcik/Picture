@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Picture
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         public string filePath = "";
-        public Form1()
+        public Main()
         {
             InitializeComponent();
             PicturePresent();
@@ -35,10 +35,21 @@ namespace Picture
         private void btChoose_Click(object sender, EventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
                 filePath = openFileDialog.FileName;
-            pbMain.Image = Image.FromFile(filePath);
-            btClear.Enabled = true;
+                try
+                {
+                    pbMain.Image = Image.FromFile(filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Zły format pliku ! System zgłasza błąd:  {ex.Message}");
+                    filePath = "";
+                }
+                btClear.Enabled = true;
+            }
         }
 
         private void btClear_Click(object sender, EventArgs e)

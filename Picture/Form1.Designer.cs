@@ -1,6 +1,6 @@
 ﻿namespace Picture
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -66,7 +66,7 @@
             this.pbMain.TabIndex = 2;
             this.pbMain.TabStop = false;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -74,7 +74,7 @@
             this.Controls.Add(this.pbMain);
             this.Controls.Add(this.btClear);
             this.Controls.Add(this.btChoose);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Zdjęcie";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).EndInit();
